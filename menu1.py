@@ -46,3 +46,27 @@ def producto_numeros():
     for n in numeros:
         producto *= n
     print(f"El producto de los numeros es: {producto}")
+
+def division_numeros():
+    try:
+        num1 = float(input("Ingrese el primer numero: "))
+        num2 = float(input("Ingrese el segundo numero: "))
+        if num2 == 0:
+            print("Error: No se puede dividir entre cero.")
+        else:
+            print(f"El resultado de la division es: {num1 / num2}")
+    except ValueError:
+        print("Por favor, ingrese valores numericos validos.")
+
+def calcular_factorial():
+    try:
+        num = int(input("Ingrese un numero entero: "))
+        if num < 0:
+            print("El factorial no esta definido para numeros negativos.")
+        else:
+            factorial = 1
+            for i in range(1, num + 1):
+                factorial *= i
+            print(f"El factorial de {num} es: {factorial}")
+    except ValueError:
+        print("Por favor, ingrese un numero entero valido.")
