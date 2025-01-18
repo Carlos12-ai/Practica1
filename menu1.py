@@ -87,3 +87,40 @@ def cuadrado_cubo():
          print(f"El cubo de {num} es: {num**3}")
      except ValueError:
          print("Por favor, ingrese un numero valido.")
+def promedio_numeros():
+    numeros = []
+    print("Ingrese los numeros uno por uno. Ingrese -1 para terminar.")
+    while True:
+        try:
+            num = float(input("Numero: "))
+            if num == -1:
+                break
+            numeros.append(num)
+        except ValueError:
+            print("Por favor, ingrese un numero valido.")
+    if numeros:
+        promedio = sum(numeros) / len(numeros)
+        print(f"El promedio de los numeros es: {promedio}")
+    else:
+        print("No se ingresaron numeros para calcular el promedio.")
+
+def valores_max_min():
+    numeros = []
+    print("Ingrese los numeros uno por uno. Ingrese -1 para terminar.")
+    while True:
+        try:
+            num = int(input("Numero: "))
+            if num == -1:
+                break
+            numeros.append(num)
+        except ValueError:
+            print("Por favor, ingrese un numero entero valido.")
+    if numeros:
+        print(f"El valor maximo es: {max(numeros)}")
+        print(f"El valor minimo es: {min(numeros)}")
+        print(f"Se ingresaron un total de {len(numeros)} numeros.")
+    else:
+        print("No se ingresaron numeros.")
+
+if __name__ == "__main__":
+    main_menu()
