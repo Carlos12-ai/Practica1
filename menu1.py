@@ -70,3 +70,20 @@ def calcular_factorial():
             print(f"El factorial de {num} es: {factorial}")
     except ValueError:
         print("Por favor, ingrese un numero entero valido.")
+
+def tablas_multiplicar():
+ try:
+     num = int(input("Ingrese el numero de la tabla de multiplicar: "))
+         print(f"Tabla de multiplicar del {num}:")
+     for i in range(1, 11):
+         print(f"{num} x {i} = {num * i}")
+     except ValueError:
+         print("Por favor, ingrese un numero entero valido.")
+
+def cuadrado_cubo():
+ try:
+     num = float(input("Ingrese un numero: "))
+         print(f"El cuadrado de {num} es: {num**2}")
+         print(f"El cubo de {num} es: {num**3}")
+     except ValueError:
+         print("Por favor, ingrese un numero valido.")
